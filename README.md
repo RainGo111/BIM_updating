@@ -1,6 +1,6 @@
 # BIM_Updating
 This repository contains a complete implementation method proposed in the paper for semi-automated local updating for as-built BIM of piping systems using point cloud data.
-# BIM Updating: Semi-Automated As-Built BIM Updating for Piping Systems
+# Semi-Automated As-Built BIM Updating for Piping Systems
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GitHub Issues](https://img.shields.io/github/issues/RainGo111/BIM_updating.svg)](https://github.com/RainGo111/BIM_updating/issues)
