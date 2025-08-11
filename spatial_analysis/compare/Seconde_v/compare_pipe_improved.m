@@ -6,7 +6,7 @@ function pipe_comparison_results = compare_pipe_improved(design_file, built_file
 
 clc;
 
-%% 参数配置 (如果未提供config则使用默认值)
+%% 参数配置
 if nargin < 3
     config = struct();
 end
@@ -15,7 +15,7 @@ end
 default_config = struct(...
     'max_distance', 1, ...           % 圆柱拟合最大距离
     'ransac_d', 10, ...             % RANSAC拟合误差
-    'angle_threshold', 10, ...       % 角度差异阈值(度)
+    'angle_threshold', 5, ...       % 角度差异阈值(度)
     'radius_multiplier', 2, ...      % 半径倍数用于球体阈值计算
     'show_plots', true, ...         % 是否显示图形
     'verbose', true ...             % 是否显示详细输出
