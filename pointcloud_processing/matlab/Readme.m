@@ -1,0 +1,2 @@
+% 该部分代码主要是进行建筑的墙体的删除，主要依靠RANSAC实现，目前该部分已被PointNet++替代
+% This part of the code is mainly used to delete the walls of the building, mainly relying on RANSAC. Currently, this part has been replaced by PointNet++

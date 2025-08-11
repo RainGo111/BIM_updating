@@ -1,0 +1,16 @@
+2025-02-08 10:44:02,605 - Model - INFO - PARAMETER ...
+2025-02-08 10:44:02,605 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_sem_seg', num_point=4096, num_votes=3, test_area=2, visual=True)
+2025-02-08 10:44:02,778 - Model - INFO - The number of test data is: 5
+2025-02-08 10:44:03,267 - Model - INFO - ---- EVALUATION WHOLE SCENE----
+2025-02-08 10:44:37,444 - Model - INFO - Mean IoU of Area_2_room_220: 1.0000
+2025-02-08 10:45:12,960 - Model - INFO - Mean IoU of Area_2_room_219: 0.9979
+2025-02-08 10:46:38,490 - Model - INFO - Mean IoU of Area_2_room_217: 0.9984
+2025-02-08 10:47:18,801 - Model - INFO - Mean IoU of Area_2_room_218: 0.9999
+2025-02-08 10:51:34,561 - Model - INFO - Mean IoU of Area_2_room_221: 0.9976
+2025-02-08 10:51:34,974 - Model - INFO - ------- IoU --------
+class nonepipe      , IoU: 1.000 
+class pipe          , IoU: 0.998 
+
+2025-02-08 10:51:34,974 - Model - INFO - eval point avg class IoU: 0.998771
+2025-02-08 10:51:34,974 - Model - INFO - eval whole scene point avg class acc: 0.999191
+2025-02-08 10:51:34,974 - Model - INFO - eval whole scene point accuracy: 0.999918
