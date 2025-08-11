@@ -45,23 +45,15 @@ conda create -n bim-updating python=3.8
 conda activate bim-updating
 
 # MATLAB (for spatial analysis module)
-# MATLAB R2023b or later with Computer Vision Toolbox
+MATLAB R2023b or later with Computer Vision Toolbox
 ```
 
 ## 📊 Results
 
 Our method achieves:
-- **Segmentation Accuracy**: 96% for piping system identification
+- **Segmentation Accuracy**: 96% for piping system segmantation
 - **Geometric Precision**: ±5mm for dimensional measurements
 - **Processing Speed**: 70% faster than manual methods
-
-## 📈 Experimental Validation
-
-### Performance Metrics
-| Method | Accuracy | Processing Time | Manual Effort Reduction |
-|--------|----------|----------------|------------------------|
-| Traditional | 85% | 8 hours | 30% |
-| **Our Method** | **96%** | **2.4 hours** | **70%** |
 
 ## 🔧 Technical Details
 
