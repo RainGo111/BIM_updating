@@ -28,14 +28,14 @@ Our approach addresses the challenge of maintaining accurate as-built BIM models
 - **PointNet++ Version**: 
   - Custom-trained network for direct piping segmentation
   - Real-time piping network extraction
-- **CloudCompare Integration**: 
-  - Instance segmentation for individual pipe extraction
 
 ### 2. Spatial and Topological Analysis
 - **Geometric Parameter Extraction**: Automated measurement of pipe dimensions
-- **As-designed Processing**: CAD model parameter extraction
-- **As-built Processing**: Point cloud-based geometric analysis
 - **Change Quantification**: Statistical analysis of geometric deviations
+
+### 3. As-built BIM generation
+- **As-designed Processing**: Revit model parameter extraction by using Dynamo
+- **As-built Processing**: Point cloud-based geometric analysis
 
 ## 🚀 Quick Start
 
@@ -44,35 +44,9 @@ Our approach addresses the challenge of maintaining accurate as-built BIM models
 # Python environment
 conda create -n bim-updating python=3.8
 conda activate bim-updating
-pip install -r requirements.txt
 
 # MATLAB (for spatial analysis module)
-# MATLAB R2020b or later with Computer Vision Toolbox
-```
-
-### Installation
-```bash
-git clone https://github.com/RainGo111/BIM_updating.git
-cd BIM_updating
-pip install -e .
-```
-
-### Basic Usage
-
-#### 1. Point Cloud Preprocessing
-```python
-# Using PointNet++ for piping segmentation
-from preprocessing.pointnet_version import PipingSegmentationNet
-
-model = PipingSegmentationNet.load_pretrained()
-piping_points = model.segment_pointcloud(input_pointcloud)
-```
-
-#### 2. Geometric Comparison
-```matlab
-% MATLAB spatial analysis
-addpath('spatial_analysis/matlab_algorithms')
-[changes, metrics] = compare_as_designed_as_built(design_model, pointcloud_model);
+# MATLAB R2023b or later with Computer Vision Toolbox
 ```
 
 ## 📊 Results
@@ -82,28 +56,7 @@ Our method achieves:
 - **Geometric Precision**: ±5mm for dimensional measurements
 - **Processing Speed**: 70% faster than manual methods
 
-## 📁 Repository Structure
-
-```
-BIM_updating/
-├── preprocessing/                 # Point cloud preprocessing modules
-│   ├── matlab_version/           # MATLAB implementation
-│   ├── pointnet_version/         # PointNet++ implementation  
-│   └── cloudcompare_integration/ # CloudCompare automation
-├── spatial_analysis/             # Geometric comparison algorithms
-│   ├── matlab_algorithms/        # MATLAB-based analysis
-│   └── python_integration/       # Python interfaces
-├── datasets/                     # Sample data and training sets
-├── experiments/                  # Experimental validation
-├── tools/                        # Visualization and utilities
-└── docs/                         # Documentation
-```
-
 ## 📈 Experimental Validation
-
-### Case Studies
-- **Industrial Facility**: Complex piping network with 200+ components
-- **Commercial Building**: HVAC piping systems across multiple floors
 
 ### Performance Metrics
 | Method | Accuracy | Processing Time | Manual Effort Reduction |
@@ -123,53 +76,14 @@ BIM_updating/
 - **Output**: JSON geometric parameters, CSV change reports
 - **Visualization**: 3D interactive models
 
-## 📚 Citation
-
-If you use this work in your research, please cite:
-
-```bibtex
-@article{your_paper_2024,
-  title={Semi-Automated Local Updating for As-Built BIM of Piping Systems Using Point Cloud Data},
-  author={[Your Name]},
-  journal={[Journal Name]},
-  year={2024},
-  note={Under Review}
-}
-```
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-### Development Setup
-```bash
-# Install development dependencies
-pip install -r requirements-dev.txt
-
-# Run tests
-pytest tests/
-
-# Check code style
-black preprocessing/ spatial_analysis/
-flake8 preprocessing/ spatial_analysis/
-```
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
-- Point cloud datasets provided by [Data Source]
-- PointNet++ implementation based on [Original Repository]
-- Special thanks to reviewers for valuable feedback
+Real Point Cloud Data: Self-collected by the authors using laser scanning equipment
+Synthetic Point Cloud Data: Generated using [Blensor](https://www.blensor.org/) simulation framework
+Real BIM Models: Self-constructed Revit models by the authors
+Simulation BIM Models: Sourced from [SimAUD Dataset](https://www.simaud.org/datasets/)
 
-## 📞 Contact
-
-- **Author**: [Your Name]
-- **Email**: [your.email@university.edu]
-- **Institution**: [Your University/Organization]
-
----
-
-**Keywords**: BIM, Point Cloud Processing, Deep Learning, PointNet++, Piping Systems, As-Built Modeling, Change Detection
