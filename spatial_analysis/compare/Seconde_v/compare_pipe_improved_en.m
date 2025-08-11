@@ -6,7 +6,7 @@ function pipe_comparison_results = compare_pipe_improved_en(design_file, built_f
 
 clc;
 
-%% Parameter Configuration (use default values if config not provided)
+%% Parameter Configuration
 if nargin < 3
     config = struct();
 end
@@ -15,7 +15,7 @@ end
 default_config = struct(...
     'max_distance', 1, ...           % Maximum distance for cylinder fitting
     'ransac_d', 10, ...             % RANSAC fitting error threshold
-    'angle_threshold', 10, ...       % Angle difference threshold (degrees)
+    'angle_threshold', 5, ...       % Angle difference threshold (degrees)
     'radius_multiplier', 2, ...      % Radius multiplier for sphere threshold calculation
     'show_plots', true, ...         % Whether to display plots
     'verbose', true ...             % Whether to show detailed output
