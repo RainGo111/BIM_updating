@@ -13,7 +13,6 @@ This repository contains the complete implementation of methods proposed in our 
 Our approach addresses the challenge of maintaining accurate as-built BIM models by automatically detecting and quantifying geometric changes in piping systems through point cloud analysis.
 
 ### Key Features
-- **Dual preprocessing approaches**: MATLAB-based traditional methods and PointNet++-based deep learning
 - **Automated piping segmentation**: Direct extraction of piping networks from point clouds
 - **Geometric change detection**: Quantification of changes in length, height, radius, and angle
 - **As-designed vs As-built comparison**: Systematic analysis of design deviations
