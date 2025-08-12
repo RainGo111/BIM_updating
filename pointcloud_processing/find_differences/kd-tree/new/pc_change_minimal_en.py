@@ -17,16 +17,6 @@ as_designed coordinate space/result, with categories:
      - 每个点一行，包含来源（as_designed/as_built）、在原始点云中的索引、坐标与类别
        便于后续筛选或与其他系统对接
 
-基本假设：
-  • 两个点云已经完成粗配准与精配准（处于同一坐标系）
-  • 点云较大时，采用“非重叠均匀网格分块”以控制内存与加速 KDTree 查询
-
-依赖：open3d, numpy, scipy（cKDTree）
-
-命令示例：
-  python pc_change_minimal.py as_designed_model.ply as_built_model.ply \
-         --voxel 0.02 --grid 2.0 --match 0.05 --unchanged 0.015 --csv change_points.csv
-
 重要参数说明：
   • --match：设计点与建成点匹配的最大半径，超过该半径即视作“无匹配”；
   • --unchanged：更严格的“未变”阈值（<= unchanged 视为 UNCHANGED，
